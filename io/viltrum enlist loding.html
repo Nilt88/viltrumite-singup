@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title> Sing up for viltrum forces</title>
+         <style>
+        /* Definindo o estilo para o corpo da página */
+        body {
+            height: 100vh; /* Altura total da janela */
+            margin: 0; /* Removendo a margem padrão */
+            display: flex; /* Usando flexbox */
+            background-color: #5e5f5c; /* Cor de fundo */
+            justify-content: center; /* Alinhando horizontalmente */
+            align-items: center; /* Alinhando verticalmente */
+            font-family: Arial, sans-serif; /* Definindo uma fonte */
+        }
+        /* Estilizando o botão */
+        button {
+            
+            padding: 10px 20px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            cursor: pointer; /* Apontador do mouse */
+            border: 0; /* Sem borda */
+            background-color: #ffffff /* Cor de fundo */
+            color: black; /* Cor do texto */
+            border-radius: 0px; /* Bordas arredondadas */
+            transition: background-color 0.5s; /* Efeito de transição */
+        }
+
+        /* Efeito ao passar o mouse */
+        button:hover {
+            background-color: rgb(167, 167, 167); /* Cor de fundo ao passar o mouse */
+        }
+        .spinner {
+      width: 100px;
+      animation: girar 4s ease-in-out infinite; /* Aceleração e desaceleração suave */
+    }
+
+    @keyframes girar {
+      0% {
+        transform: rotate(0deg); /* Começo da animação */
+      }
+      25% {
+        transform: rotate(180deg); /* Aceleração suave */
+      }
+      50% {
+        transform: rotate(360deg); /* Meio do ciclo */
+      }
+      75% {
+        transform: rotate(540deg); /* Desaceleração suave */
+      }
+      100% {
+        transform: rotate(720deg); /* Fim da rotação */
+      }
+        </style>
+    </head>
+    <body>
+        <script>
+        // Captura o parâmetro "destino" da URL
+        const params = new URLSearchParams(window.location.search);
+        const destino = params.get('destino'); // Pega o valor da variável "destino"
+
+        // Se a variável "destino" existir, redireciona após um tempo aleatório
+        if (destino) {
+            const tempo = Math.floor(Math.random() * (6000 - 1000 + 1)) + 1000; // tempo aleatório entre 1000 e 6000 ms
+
+            console.log("Redirecionando para:", destino, "em", tempo, "milissegundos");
+
+            setTimeout(() => {
+                window.location.href = destino; // Redireciona para a página armazenada na variável "destino"
+            }, tempo);
+        }
+    </script>
+            <img src="Viltrum-Empire-Logo.jpg" alt="Descrição da imagem" width="150" class="spinner">
+            
+    </body>
+
+</html>
