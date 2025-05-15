@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscreva-se nas Forças de Viltrum</title>
+    <style>
+        body {
+            height: 200vh;
+            margin: 0;
+            display: flex;
+            background-color: #5e5f5c;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 0;
+            background-color: #707070;
+            color: black;
+            border-radius: 0px;
+            transition: background-color 0.5s;
+        }
+
+        button:hover {
+            background-color: rgb(167, 167, 167);
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .uniformo {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+
+        .uniformo img {
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .uniformo img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <img src="Viltrum-Empire-Logo.jpg" alt="Logo do Império Viltrum" width="150">
+    <div class="container">
+        <h2>Questionário de Perfil</h2>
+        <form action="viltrum enlist loding.html?destino=viltrum enlist complete.html" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="codenome">Codinome:</label>
+            <input type="text" id="codenome" name="codenome" required>
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Selecione</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+
+            <label for="tamanho">Altura (em cm):</label>
+            <input type="number" id="tamanho" name="tamanho" required>
+
+            <label for="peso">Peso (em kg):</label>
+            <input type="number" id="peso" name="peso" required>
+
+            <label for="planeta">Planeta de Origem:</label>
+            <input type="text" id="planeta" name="planeta" required>
+
+            <label for="raca">Raça:</label>
+            <input type="text" id="raca" name="raca" required>
+
+            <label for="experiencia">Experiência de Combate:</label>
+            <select id="experiencia" name="experiencia" required>
+                <option value="">Selecione uma opção</option>
+                <option value="mestre">Mestre</option>
+                <option value="experiente">Experiente</option>
+                <option value="amador">Amador</option>
+                <option value="inexperiente">Inexperiente</option>
+            </select>
+
+            <label>Escolha seu Tipo de Uniforme:</label>
+            <div class="uniformo">
+                <label>
+                    <input type="radio" name="uniforme" value="uniforme1" required>
+                    <img src="uniforme 1.webp" alt="Uniforme 1">
+                </label>
+                <label>
+                    <input type="radio" name="uniforme" value="uniforme2">
+                    <img src="uniforme 2.jpg" alt="Uniforme 2">
+                </label>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
